@@ -5,10 +5,10 @@ class Rectangle {
     }
   }
 
-  //let a=this.w;
-  //let b=this.h;
+  let a=undefined;
+  let b=undefined;
 
-  //const r1 = new Rectangle(a, b);
-  //console.log(r1);         // Output: Rectangle { width: a, height: b}
-  //console.log(r1.width);   // Output: a
-  //console.log(r1.height);  // Output: b
+  const r1 = new Rectangle(a, b);
+  console.log(r1);         // Output: Rectangle { width: a, height: b}
+  console.log(r1.width);   // Output: a
+  console.log(r1.height);  // Output: b
