@@ -13,9 +13,9 @@ request(url, (error, response, body) => {
     fs.writeFile(filePath, body, 'utf-8', (err) => {
       if (err) {
         console.error('Error writing to the file:', err);
-      } else {
+      } /*else {
         console.log();
-      }
+      }*/
     });
   } else {
     console.error('Failed to fetch webpage. Status code:', response.statusCode);
