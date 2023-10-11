@@ -5,9 +5,9 @@ class Rectangle {
     }
   }
 
-  import { createInterface } from 'readline';
+  const readline = require('readline');
 
-const rl = createInterface({
+const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
