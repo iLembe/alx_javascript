@@ -19,6 +19,11 @@ request(apiUrl, (error, response, body) => {
       }
     }
 
-    console.log(completedTasks);
+    const result = {};
+    for (const userId in completedTasks) {
+      result[userId] = completedTasks[userId];
+    }
+
+    console.log(result);
   }
 });
