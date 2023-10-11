@@ -1,13 +1,15 @@
+#!/usr/bin/node
+
 class Rectangle {
     constructor(w, h) {
       this.width = w;
       this.height = h;
     }
   }
-  
-  // Test case: Instance width: 3 - height: -3
-  const r1 = new Rectangle(3, -3);
-  if (r1.width === 3 && r1.height === -3) {
+  /*
+  // Test case: Instance width: 3 - height: 3
+  const r1 = new Rectangle(3, 3);
+  if (r1.width === 3 && r1.height === 3) {
     console.log(r1);
     console.log(r1.width);
     console.log(r1.height);
@@ -38,3 +40,5 @@ class Rectangle {
   console.log(r4.width);
   console.log(r4.height);
   }
+
+  */

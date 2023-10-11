@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 class Rectangle {
     constructor() {
       // You can add constructor logic here if needed.
