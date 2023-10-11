@@ -5,10 +5,19 @@ class Rectangle {
     }
   }
 
-  let a=undefined;
-  let b=undefined;
+  import { createInterface } from 'readline';
 
-  const r1 = new Rectangle(a, b);
-  console.log(r1);         // Output: Rectangle { width: a, height: b}
-  console.log(r1.width);   // Output: a
-  console.log(r1.height);  // Output: b
+const rl = createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('Enter the width: ', (width) => {
+  rl.question('Enter the height: ', (height) => {
+    const r1 = new Rectangle(width, height);
+    console.log(r1);
+    console.log(r1.width);
+    console.log(r1.height);
+    rl.close();
+  });
+});
