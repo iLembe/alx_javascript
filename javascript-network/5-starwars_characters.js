@@ -17,5 +17,6 @@ request(url, (error, response, body) => {
         }
       });
     });
+    console.log("OK"); // Print "OK" to indicate successful execution
   }
 });
