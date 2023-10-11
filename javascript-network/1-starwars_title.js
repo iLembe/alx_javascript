@@ -11,7 +11,7 @@ request(url, (error, response, body) => {
     console.error('Error:', error);
   } else if (response.statusCode === 200) {
     const movie = JSON.parse(body);
-    console.log('Title:', movie.title);
+    console.log(movie.title);
   } else {
     console.error('Movie not found. Status code:', response.statusCode);
   }
