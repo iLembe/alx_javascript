@@ -4,20 +4,12 @@ class Rectangle {
       this.height = h;
     }
   }
-
-  const readline = require('readline');
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-rl.question('Enter the width: ', (width) => {
-  rl.question('Enter the height: ', (height) => {
-    const r1 = new Rectangle(width, height);
-    console.log(r1);
-    console.log(r1.width);
-    console.log(r1.height);
-    rl.close();
-  });
-});
+  
+  let a = 5;
+  let b = 7;
+  
+  const r1 = new Rectangle(a, b);
+  console.log(r1);         // Output: Rectangle { width: 5, height: 7 }
+  console.log(r1.width);   // Output: 5
+  console.log(r1.height);  // Output: 7
+  
