@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 class Rectangle {
-    constructor(w, h) {
+    constructor(w = 0, h = 0) {
       if (w > 0 && h > 0) {
         this.width = w;
         this.height = h;
@@ -12,10 +12,8 @@ class Rectangle {
     }
   }
   
-  // Test cases:
-  
-  const r2 = new Rectangle(0, 3);
-  console.log(r2);         // Output: {}
-  console.log(r2.width);   // Output: undefined
-  console.log(r2.height);  // Output: undefined
+  const r3 = new Rectangle();
+  console.log(r3);         // Output: {}
+  console.log(r3.width);   // Output: undefined
+  console.log(r3.height);  // Output: undefined
   
