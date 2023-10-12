@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login to the website</title>
+</head>
+<body>
+  <h1>Login to the Website</h1>
+  <label for="firstname">First Name:</label><br>
+  <input type="text" id="firstname">
+  <label for="email">Email:</label><br>
+  <input type="email" id="email">
+  <button onclick="setCookies()">Log me in</button>
+  <button onclick="showCookies()">Show the cookies</button>
+  <script>
+    function setCookies() {
+      document.cookie = "firstname=" + document.getElementById("firstname").value;
+      document.cookie = "email=" + document.getElementById("email").value;
+    }
+    function showCookies() {
+      var p = document.createElement("p");
+      p.innerHTML = "Cookies: " + document.cookie;
+      document.body.appendChild(p);
+    }
+  </script>
+</body>
+</html>
+
+
+
+

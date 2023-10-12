@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+</head>
+<body>
+  <div id="login-form" style="display: none;">
+    <h2>Login To The Website</h2>
+    <form>
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" name="firstname"><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <input type="button" value="Log me in" onclick="setCookies()">
+      <input type="button" value="Show the cookies" onclick="showCookies()">
+    </form>
+  </div>
+  
+  <script>
+    function setCookies() {
+      var firstname = document.getElementById("firstname").value;
+      var email = document.getElementById("email").value;
+      document.cookie = "firstname=" + firstname;
+      document.cookie = "email=" + email;
+    }
+    
+    function getCookie(name) {
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.startsWith(name + '=')) {
+          return cookie.substring(name.length + 1);
+        }
+      }
+      return "";
+    }
+    
+    function showCookies() {
+      var email = getCookie("email");
+      var firstname = getCookie("firstname");
+      var p = document.createElement("p");
+      p.innerHTML = "Email: " + email + " - Firstname: " + firstname;
+      document.body.appendChild(p);
+    }
+
+    // New Functions
+    function showForm() {
+      var welcomeMessage = document.getElementById("welcome-message");
+      if (welcomeMessage) {
+        welcomeMessage.remove();
+      }
+      var loginForm = document.getElementById("login-form");
+      loginForm.style.display = "block";
+    }
+
+    function hideForm() {
+      var loginForm = document.getElementById("login-form");
+      loginForm.style.display = "none";
+    }
+
+    function deleteCookiesAndShowForm() {
+      document.cookie = "firstname=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+      document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+      showForm();
+    }
+
+    function showWelcomeMessageOrForm() {
+      var firstname = getCookie("firstname");
+      if (!firstname) {
+        showForm();
+      } else {
+        var welcomeMessage = document.createElement("h1");
+        welcomeMessage.id = "welcome-message";
+        welcomeMessage.innerHTML = "Welcome " + firstname + " ";
+        var logoutLink = document.createElement("a");
+        logoutLink.href = "javascript:void(0);";
+        logoutLink.style.fontStyle = "italic";
+        logoutLink.style.fontWeight = "normal";
+        logoutLink.style.marginLeft = "10px";
+        logoutLink.innerText = "(logout)";
+        logoutLink.onclick = deleteCookiesAndShowForm;
+        welcomeMessage.appendChild(logoutLink);
+        document.body.innerHTML = ""; // Clear the body
+        document.body.appendChild(welcomeMessage);
+      }
+    }
+    
+    showWelcomeMessageOrForm();
+  </script>
+</body>
+</html>
