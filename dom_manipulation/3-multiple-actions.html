@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Creating and Removing Elements</title>
+</head>
+<body>
+  <div id="container"></div>
+  <button id="toggleButton">Toggle Paragraph</button>
+
+  <script>
+    // Select the container element by its id
+    var container = document.getElementById('container');
+    var toggleButton = document.getElementById('toggleButton');
+    var paragraphVisible = true;
+
+    // Create a new paragraph element
+    var newParagraph = document.createElement('p');
+    newParagraph.textContent = 'Cristiano Ronaldo is The Greatest Athlete Of All Time';
+
+    // Append the new paragraph to the container
+    container.appendChild(newParagraph);
+
+    // Add an event listener to the button to toggle paragraph visibility
+    toggleButton.addEventListener('click', function () {
+      if (paragraphVisible) {
+        container.removeChild(newParagraph);
+        paragraphVisible = false;
+      } else {
+        container.appendChild(newParagraph);
+        paragraphVisible = true;
+      }
+    });
+  </script>
+</body>
+</html>
