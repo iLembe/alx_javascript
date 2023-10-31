@@ -31,7 +31,7 @@ class Rectangle {
 }
 
 // Example usage:
-const rectangle = new Rectangle(1, 2);
+const rectangle = new Rectangle(w, h);
 rectangle.print();
 rectangle.rotate();
 rectangle.print();
