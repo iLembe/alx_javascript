@@ -32,11 +32,8 @@ class Rectangle {
   
   // Example usage:
   const rectangle = new Rectangle(4, 3);
-  rectangle.print();
-  console.log("After rotating:");
   rectangle.rotate();
   rectangle.print();
-  console.log("After doubling:");
   rectangle.double();
   rectangle.print();
   
