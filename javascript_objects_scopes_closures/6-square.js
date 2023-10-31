@@ -3,7 +3,13 @@ class Square extends require('./5-square') {
       if (c === undefined) c = 'X';
   
       for (let i = 0; i < this.height; i++) {
-        console.log(c.repeat(this.width));
+        if (c === 'D' && i < this.height / 2) {
+          console.log(c.repeat(this.width));
+        } else if (c === 'O' && i < this.height / 2) {
+          console.log('D'.repeat(this.width));
+        } else {
+          console.log(c.repeat(this.width));
+        }
       }
     }
   }
