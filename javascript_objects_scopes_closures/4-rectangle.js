@@ -31,9 +31,9 @@ class Rectangle {
 }
 
 // Example usage:
-const rectangle = new Rectangle(w, h);
-rectangle.print();
-rectangle.rotate();
-rectangle.print();
-rectangle.double();
-rectangle.print();
+const r1 = new Rectangle(1, 2);
+r1.print();
+r1.rotate();
+r1.print();
+r1.double();
+r1.print();
