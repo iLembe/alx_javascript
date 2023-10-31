@@ -31,7 +31,7 @@ class Rectangle {
   }
   
   // Example usage:
-  const rectangle = new Rectangle(4, 3);
+  const rectangle = new Rectangle(1, 2);
   rectangle.rotate();
   rectangle.print();
   rectangle.double();
