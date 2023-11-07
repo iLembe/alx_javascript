@@ -12,8 +12,4 @@ class Rectangle {
   }
   module.exports = Rectangle;
 
-  /*const r3 = new Rectangle();
-  console.log(r3);         // Output: {}
-  console.log(r3.width);   // Output: undefined
-  console.log(r3.height);  // Output: undefined */
-  
+ 

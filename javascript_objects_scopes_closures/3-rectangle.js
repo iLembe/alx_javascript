@@ -16,10 +16,5 @@ class Rectangle {
   }
   module.exports = Rectangle;
   
-  /* Example usage:
-  const rectangle1 = new Rectangle(4, 3);
-  const rectangle2 = new Rectangle(0, 5);
-  
-  rectangle1.print();
-  rectangle2.print();*/
+
   
