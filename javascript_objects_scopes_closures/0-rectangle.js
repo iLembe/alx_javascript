@@ -5,7 +5,7 @@ class Rectangle {
       // Might have to Add constructor logic here
     }*/
   }
-  const Rectangle = require ('./0-rectangle')
+  const Rectangle = require ('./0-rectangle');
   // Example of creating an instance of the Rectangle class:
   const r1 = new Rectangle();
   
