@@ -7,7 +7,7 @@ class Rectangle {
   }
   
   // Example of creating an instance of the Rectangle class:
-  const myRectangle = new Rectangle();
+  const r1 = new Rectangle();
   
-  console.log(myRectangle);  // Output: Rectangle {}
+  console.log(r1);  // Output: Rectangle {}
   console.log(Rectangle);  // Output: [Function: Rectangle]
