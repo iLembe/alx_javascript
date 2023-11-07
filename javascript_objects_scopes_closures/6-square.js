@@ -13,9 +13,12 @@ class Square extends require('./5-square') {
       }
     }
   }
-  
+module.exports = Rectangle;
+module.exports = Square;
+
+  /*
   const square = new Square(3);
   square.charPrint('D');
   square.double();
-  square.charPrint('O');
+  square.charPrint('O');*/
   
