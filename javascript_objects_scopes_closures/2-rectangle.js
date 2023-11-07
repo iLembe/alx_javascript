@@ -6,10 +6,8 @@ class Rectangle {
         this.width = w;
         this.height = h;
       } else {
-        print("Rectangle {}");
+        return {};
       }
     }
   }
   module.exports = Rectangle;
-
- 
