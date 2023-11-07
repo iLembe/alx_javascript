@@ -5,5 +5,5 @@ class Square extends Rectangle {
     super(size, size); // Calling the constructor of the Rectangle class with the size argument
   }
 }
-
+module.exports = Rectangle;
 module.exports = Square;

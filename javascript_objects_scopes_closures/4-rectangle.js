@@ -29,7 +29,7 @@ class Rectangle {
     }
   }
 }
-
+module.exports = Rectangle;
 // Example usage:
 const r1 = new Rectangle(1, 2);
 r1.print();

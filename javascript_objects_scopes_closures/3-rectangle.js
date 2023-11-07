@@ -14,6 +14,7 @@ class Rectangle {
       }
     }
   }
+  module.exports = Rectangle;
   
   // Example usage:
   const rectangle1 = new Rectangle(4, 3);
