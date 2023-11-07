@@ -6,6 +6,8 @@ class Rectangle {
       this.height = h;
     }
   }
+
+  module.exports = Rectangle;
   /*
   // Test case: Instance width: 3 - height: 3
   const r1 = new Rectangle(3, 3);
